@@ -1,19 +1,19 @@
-#Verificando el estado de docker
+# Verificando el estado de docker
 sudo service docker status
 
-#Iniciando la aplicacion de docker
+# Iniciando la aplicacion de docker
 sudo service docker start
 
-#Re-Iniciando la aplicacion de docker
+# Iniciando la aplicacion de docker
 sudo service docker restart
 
-#Corriendo un contenedor MYSQL
+# Corriendo un contenedor MYSQL
 sudo docker run --name projectMysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=gabopassword -d mysql
 
-#corriendo un contenedor MariaDB
+# Corriendo un contenedor MariaDB
 sudo docker run --detach --name projectMariadb --env MARIADB_USER=gabopassword --env MARIADB_PASSWORD=gabopassword --env MARIADB_ROOT_PASSWORD=gabopassword  mariadb:latest
 
-#corriendo un contenedor MongoDB
+# Corriendo un contenedor MongoDB
 docker run --name projectMongodb -d mongo:tag
 
 docker run -it --network some-network --rm mongo mongosh --host some-mongo test
@@ -78,12 +78,12 @@ docker run: comando para ejecutar una imagen de Docker.
 mongo-express: especifica la imagen de Docker a ejecutar.
 
 
-#corriendo un contenedor Python
+# Corriendo un contenedor Python
 docker run -it --rm --name python3 python:latest
 
 Este comando inicia un contenedor de Docker a partir de la imagen python:3 y te da acceso a una consola interactiva (-it). También elimina automáticamente el contenedor después de que salgas de la sesión (--rm).
 
-#corriendo un contenedor MariaDB
+# Corriendo un contenedor MariaDB
 docker run -it --rm \
     --name mariadb \
     -e MYSQL_ROOT_PASSWORD=gabopassword \
