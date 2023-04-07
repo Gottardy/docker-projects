@@ -1,11 +1,15 @@
 import Express from "express";
 import Mariadb from "mariadb";
 import mongoose from "mongoose";
+import { v4 } from "uuid";
 
 
 const app = Express();
 app.get('/', (req, res) =>{
-    res.send('Hello World');
+    // res.send('Hello World');
+    res.json({
+        id:v4()
+    })
 });
 
 
