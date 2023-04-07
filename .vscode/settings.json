@@ -1,0 +1,5 @@
+{
+    "github.gitProtocol": "https",
+    "git.terminalGitEditor": true,
+    "git.allowForcePush": true
+}

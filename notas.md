@@ -14,6 +14,9 @@ sudo docker run --name projectMysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=gabopass
 sudo docker run --detach --name projectMariadb --env MARIADB_USER=gabopassword --env MARIADB_PASSWORD=gabopassword --env MARIADB_ROOT_PASSWORD=gabopassword  mariadb:latest
 
 # Corriendo un contenedor MongoDB
+sudo docker run --rm --name mongodb -p 27017:27017 mongo
+
+# Corriendo un contenedor MongoDB-Express
 docker run --name projectMongodb -d mongo:tag
 
 docker run -it --network some-network --rm mongo mongosh --host some-mongo test
@@ -91,3 +94,4 @@ docker run -it --rm \
     -p 3306:3306 \
     mariadb:10.11
 
+sudo docker run -it --rm --detach --name mariadb --env MARIADB_USER=gabo --env MARIADB_PASSWORD=gabopassword --env MARIADB_ROOT_PASSWORD=gabopassword --env MARIADB_DATABASE=pruebasMariaDB -p 3306:3306 mariadb:10.11
